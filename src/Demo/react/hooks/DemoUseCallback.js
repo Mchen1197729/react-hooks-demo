@@ -1,7 +1,8 @@
 import React, {useState, useCallback} from "react";
 
 /*
-* useCallback 返回一个ref
+* useCallback(callback,dependencies)钩子函数返回一个memorized函数
+* 只有当依赖项数组发生变化时才会重新计算返回的函数的值
 * */
 export default function DemoUseCallback() {
   const [height, setHeight] = useState(0);
@@ -16,7 +17,6 @@ export default function DemoUseCallback() {
 
   const handleCLick = () => {
     console.log(measuredRef)
-
   }
 
   return (

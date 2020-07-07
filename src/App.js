@@ -41,9 +41,11 @@ import DemoCountUp from './Demo/countup/DemoCountUp'
 import ShouldSuper from './Demo/shouldUpdate/ShouldSuper'
 import ShouldSuperClass from './Demo/shouldUpdate/ShouldSuperClass'
 
+import DemoHooksMemo from './Demo/react-hooks/DemoHooksMemo'
+
 /*eslint-enable*/
 export default function App() {
   return (
-      <DemoUseRef/>
+      <DemoHooksMemo/>
   )
 }
