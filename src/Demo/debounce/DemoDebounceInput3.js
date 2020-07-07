@@ -1,8 +1,12 @@
 import React, {useState, useEffect, useMemo} from "react"
 import rafSchedule from 'raf-schd'
 
+/*eslint-disable*/
+
 import avatar from './images/avatar.png'
 import github from './images/github.jpg'
+
+/*eslint-enable*/
 
 /*
 * 对可控组件进行debounce处理

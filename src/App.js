@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import loadable from '@loadable/component'
 /* eslint-disable */
 import DemoNested from './Demo/react-router-dom/demos/DemoNested'
 import DemoBasic from './Demo/react-router-dom/demos/DemoBasic'
@@ -11,6 +12,9 @@ import DemoUseHistory from './Demo/react-router-dom/hooks/DemoUseHistory'
 import CustomLinkExample from './Demo/react-router-dom/demos/CustomLinkExample'
 import DemoConfigRoutes from './Demo/react-router-dom/demos/DemoConfigRoutes'
 import DemoConfigRoutesTest from './Demo/react-router-dom/demos/DemoConfigRoutesTest'
+import DemoPreventLeaving from './Demo/react-router-dom/demos/DemoPreventLeaving'
+// import DemoCustomRouterHook from './Demo/react-router-dom/demos/DemoCustomRouterHook'
+const DemoCustomRouterHook = loadable(() => import('./Demo/react-router-dom/demos/DemoCustomRouterHook'))
 
 import DemoUseState from './Demo/react/hooks/DemoUseState'
 import DemoUseEffect from './Demo/react/hooks/DemoUseEffect'
@@ -34,17 +38,12 @@ import DemoHighlight from './Demo/hightlight/DemoHighlight'
 
 import DemoCountUp from './Demo/countup/DemoCountUp'
 
-/*eslint-enable*/
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+import ShouldSuper from './Demo/shouldUpdate/ShouldSuper'
+import ShouldSuperClass from './Demo/shouldUpdate/ShouldSuperClass'
 
-  render() {
-    return (
-        <div>
-          <DemoCountUp/>
-        </div>
-    );
-  }
+/*eslint-enable*/
+export default function App() {
+  return (
+      <DemoUseRef/>
+  )
 }
